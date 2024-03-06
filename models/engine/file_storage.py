@@ -3,27 +3,34 @@
 import json
 from datetime import datetime
 
+
 class FileStorage:
     """ Class for Serlization and deserilization """
     __file_path = "file.json"
     __objects = dict()
 
     def all(self):
+        """ Retuns the dictionary of file storage"""
         return self.__objects
 
     def new(self, obj):
-        key  = f"{type(obj).__name__}.{obj.id}"
+        """ create a new dictionary"""
+        key = f"{type(obj).__name__}.{obj.id}"
         self.__objects[key] = obj
-    
+
     def save(self):
-        objects  = {}
+        """ Serizize a python dictionary to a
+        file
+        """
+        objects = {}
         for key, value in self.__objects.items():
             objects[key] = value.to_dict()
 
         with open(self.__file_path, 'w', encoding='utf-8') as file:
             json.dump(objects, file)
-    
+
     def reload(self):
+        """ Relaod the json file to python dictionary """
         from models.base_model import BaseModel
         definedclass = {'BaseModel': BaseModel}
         try:
