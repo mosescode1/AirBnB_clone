@@ -10,10 +10,10 @@ class Test_BaseModel(unittest.TestCase):
 
     def setUp(self):
         """ Setting up the model to run for all test """
-        base = BaseModel()
-        base.name = "My first model"
-        base.my_number = 98
-        base.created_at = datetime.dateime.now()
+        self.base = BaseModel()
+        self.base.name = "My first model"
+        self.base.my_number = 98
+        # self.base.created_at = datetime.datetime.now()
 
     def test_base_model_name(self):
         """Testing the base model name """
@@ -29,7 +29,9 @@ class Test_BaseModel(unittest.TestCase):
 
     def test_date_time(self):
         """ Testing the datetime """
-        self.assertEqual(self.created_at, datetime.datetime.now())
+        # self.base.updated_at = datetime.datetime.now()
+        self.base.save()
+        self.assertNotEqual(self.base.created_at, self.base.updated_at)
 
     def test_base_model_created(self):
         """ Testing the time created """
