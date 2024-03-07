@@ -2,12 +2,15 @@
 """ File Storage Module """
 import json
 from datetime import datetime
-
+from models.base_model import BaseModel
 
 class FileStorage:
     """ Class for Serlization and deserilization """
     __file_path = "file.json"
     __objects = dict()
+    definedclass = {
+            'BaseModel': BaseModel
+            }
 
     def all(self):
         """ Retuns the dictionary of file storage"""
@@ -31,8 +34,8 @@ class FileStorage:
 
     def reload(self):
         """ Relaod the json file to python dictionary """
-        from models.base_model import BaseModel
-        definedclass = {'BaseModel': BaseModel}
+        # from models.base_model import BaseModel
+        # definedclass= {'BaseModel': BaseModel}
         try:
             with open(self.__file_path) as file:
                 content = file.read()
@@ -40,7 +43,7 @@ class FileStorage:
                     loaded_content = json.loads(content)
                     for value in loaded_content.values():
                         class_name = value['__class__']
-                        class_obj = definedclass[class_name]
+                        class_obj = FileStorage.definedclass[class_name]
                         self.new(class_obj(**value))
         except FileNotFoundError:
             pass
