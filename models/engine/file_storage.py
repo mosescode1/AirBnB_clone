@@ -1,16 +1,18 @@
 #!/usr/bin/python3
 """ File Storage Module """
 import json
-from datetime import datetime
+# from datetime import datetime
 from models.base_model import BaseModel
+
 
 class FileStorage:
     """ Class for Serlization and deserilization """
+
     __file_path = "file.json"
     __objects = dict()
     definedclass = {
-            'BaseModel': BaseModel
-            }
+        'BaseModel': BaseModel
+    }
 
     def all(self):
         """ Retuns the dictionary of file storage"""
