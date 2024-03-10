@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=100px src="./images.png" alt="Project logo" style = "border-radius: 100px"></a>
 </p>
 
 <h3 align="center">Airbnb Clone</h3>
@@ -22,19 +22,22 @@
 
 ## 📝 Table of Contents
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [📝 Table of Contents](#-table-of-contents)
+- [🧐 About ](#-about-)
+- [🏁 Getting Started ](#-getting-started-)
+  - [Prerequisites](#prerequisites)
+- [🔧 Running the tests ](#-running-the-tests-)
+  - [Break down into end to end tests](#break-down-into-end-to-end-tests)
+- [🎈 Usage ](#-usage-)
+- [🚀 Deployment ](#-deployment-)
+- [⛏️ Built Using ](#️-built-using-)
+- [✍️ Authors ](#️-authors-)
+- [🎉 Acknowledgements ](#-acknowledgements-)
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+The Console for Airbnb clone, that perfroms CRUD operations.
+it also serilize and deserilize or file into json string and back to python object. a composed file storage system
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -50,42 +53,16 @@ sudo apt install python3
 python3 --verson
 ```
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
+This Explain how to run the automated tests for this system.
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+To Start the console
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```python3
+./console.py
 ```
 
 ## 🎈 Usage <a name="usage"></a>
@@ -98,14 +75,15 @@ Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- Python
+- OOP
+- uuid4
+- datetime
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@lovethlaw](https://github.com/lovethlaw) - Idea & Initial work
+- [@emosescode](https://github.com/emosescode) - Idea & Initial work
 
 See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
 
