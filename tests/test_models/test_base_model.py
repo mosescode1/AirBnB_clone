@@ -2,7 +2,7 @@
 """ A Basemodel testcases """
 import unittest
 from models.base_model import BaseModel
-import datetime
+# import datetime
 
 
 class Test_BaseModel(unittest.TestCase):
@@ -39,4 +39,4 @@ class Test_BaseModel(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)
