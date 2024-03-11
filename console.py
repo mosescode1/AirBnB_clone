@@ -163,15 +163,35 @@ class HBNBCommand(cmd.Cmd):
 
         storage.save()
 
+    def do_count(self, line):
+        """Count the instance Created"""
+        count = 0
+        for key in storage.all():
+            args = key.split(".")
+            if line == args[0]:
+                # if value["__class__"] == line:
+                count += 1
+        print(count)
+
     def default(self, line: str) -> None:
+        """Default Argument passed to the cmdline"""
         # splits the command line argument
         args = line.split(".")
-        """Checks if the arg[0] is in the file storage"""
+        # Checks if the arg[0] is in the file storage and if args[1] ends with
+        # all()
         if args[0] in ['User', 'BaseModel',
                        "Place", "City", "Amenity", "State",
                        "Review"
-                       ]:
+                       ] and args[1].endswith("all()"):
             self.do_all(args[0])
+            return
+
+        # counting the instance based on the class
+        if args[0] in ['User', 'BaseModel',
+                       "Place", "City", "Amenity", "State",
+                       "Review"
+                       ] and args[1].endswith("count()"):
+            self.do_count(args[0])
 
 
 if __name__ == '__main__':
