@@ -163,6 +163,16 @@ class HBNBCommand(cmd.Cmd):
 
         storage.save()
 
+    def default(self, line: str) -> None:
+        # splits the command line argument
+        args = line.split(".")
+        """Checks if the arg[0] is in the file storage"""
+        if args[0] in ['User', 'BaseModel',
+                       "Place", "City", "Amenity", "State",
+                       "Review"
+                       ]:
+            self.do_all(args[0])
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
