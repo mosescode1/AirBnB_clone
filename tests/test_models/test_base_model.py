@@ -13,6 +13,8 @@ class Test_BaseModel(unittest.TestCase):
         self.base = BaseModel()
         self.base.name = "My first model"
         self.base.my_number = 98
+
+        self.dicts = self.base.to_dict()
         # self.base.created_at = datetime.datetime.now()
 
     def test_base_model_name(self):
@@ -38,8 +40,8 @@ class Test_BaseModel(unittest.TestCase):
         self.assertTrue(self.base.created_at)
 
     def test_to_dict(self):
-        check_dict = self.base.to_dict()
-        self.assertIsInstance(check_dict, dict)
+        # check_dict = self.base.to_dict()
+        self.assertIsInstance(self.dicts, dict)
 
 
 if __name__ == "__main__":

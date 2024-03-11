@@ -16,7 +16,7 @@ class FileStorage:
     """ Class for Serlization and deserilization """
 
     __file_path = "file.json"
-    __objects = dict()
+    __objects = {}
     definedclass = {
         'BaseModel': BaseModel,
         'User': User,
