@@ -183,15 +183,19 @@ class HBNBCommand(cmd.Cmd):
                        "Place", "City", "Amenity", "State",
                        "Review"
                        ]
-
         if args[0] in class_names and args[1].endswith("all()"):
             self.do_all(args[0])
-            return
-
         # counting the instance based on the class
-        if args[0] in class_names and args[1].endswith("count()"):
+        elif args[0] in class_names and args[1].endswith("count()"):
             self.do_count(args[0])
-            return
+        elif args[0] in class_names and args[1].startswith("show"):
+            # show a dictionary representation based on the id passed
+            striped = args[1].strip("User.show(\"").strip("\")")
+            key = "{}.{}".format(args[0], striped)
+            if key not in storage.all():
+                print('** no instance found **')
+                return
+            print(storage.all()[key])
 
 
 if __name__ == '__main__':
