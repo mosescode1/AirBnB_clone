@@ -37,6 +37,10 @@ class Test_BaseModel(unittest.TestCase):
         """ Testing the time created """
         self.assertTrue(self.base.created_at)
 
+    def test_to_dict(self):
+        check_dict = self.base.to_dict()
+        self.assertIsInstance(check_dict, dict)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
