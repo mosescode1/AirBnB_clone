@@ -198,7 +198,7 @@ class HBNBCommand(cmd.Cmd):
             print(storage.all()[key])
 
         elif args[0] in class_names and args[1].startswith("destroy"):
-            # show a dictionary representation based on the id passed
+            # delete an instance based on the id passed
             striped = args[1].strip("destroy(\"").strip("\")")
             key = "{}.{}".format(args[0], striped)
             if key not in storage.all():
