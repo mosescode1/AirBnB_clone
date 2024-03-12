@@ -234,6 +234,7 @@ class HBNBCommand(cmd.Cmd):
                 setattr(storage.all()[key], attr_key, attribute_value)
             except Exception as e:
                 print("** value missing **")
+            storage.save()
 
 
 if __name__ == '__main__':
