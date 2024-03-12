@@ -183,6 +183,7 @@ class HBNBCommand(cmd.Cmd):
                        "Place", "City", "Amenity", "State",
                        "Review"
                        ]
+
         if args[0] in class_names and args[1].endswith("all()"):
             self.do_all(args[0])
         # counting the instance based on the class
@@ -194,7 +195,6 @@ class HBNBCommand(cmd.Cmd):
             key = "{}.{}".format(args[0], striped)
             if key not in storage.all():
                 print('** no instance found **')
-                return
             print(storage.all()[key])
 
         elif args[0] in class_names and args[1].startswith("destroy"):
@@ -203,9 +203,37 @@ class HBNBCommand(cmd.Cmd):
             key = "{}.{}".format(args[0], striped)
             if key not in storage.all():
                 print('** no instance found **')
-                return
             del storage.all()[key]
             storage.save()
+
+        elif args[0] in class_names and args[1].startswith("update"):
+            striped = args[1].strip("update(\"").strip("\)")
+            stripped_value = striped.split(",")
+
+            # checks if it meets all expectations
+            if len(stripped_value) < 3:
+                print("** value missing **")
+                return
+
+            # stripped class_id, class_key, class_attr
+            class_id = stripped_value[0].strip("\"")
+            class_key = stripped_value[1]
+            class_attr = stripped_value[2]
+
+            key = "{}.{}".format(args[0], class_id)
+            if key not in storage.all():
+                print('** no instance found **')
+                return
+
+            attribute_value = None
+            attr_key = None
+
+            try:
+                attribute_value = eval(class_attr)
+                attr_key = eval(class_key)
+                setattr(storage.all()[key], attr_key, attribute_value)
+            except Exception as e:
+                print("** value missing **")
 
 
 if __name__ == '__main__':
