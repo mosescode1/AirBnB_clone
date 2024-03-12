@@ -178,12 +178,14 @@ class HBNBCommand(cmd.Cmd):
         # splits the command line argument
         args = line.split(".")
         # Checks if the arg[0] is in the file storage and if args[1] ends with
-        # all()
+
+        # all Available Instance
         class_names = ['User', 'BaseModel',
                        "Place", "City", "Amenity", "State",
                        "Review"
                        ]
 
+        # prints all the instance based on the class name
         if args[0] in class_names and args[1].endswith("all()"):
             self.do_all(args[0])
         # counting the instance based on the class
