@@ -191,7 +191,7 @@ class HBNBCommand(cmd.Cmd):
             self.do_count(args[0])
         elif args[0] in class_names and args[1].startswith("show"):
             # show a dictionary representation based on the id passed
-            striped = args[1].strip("User.show(\"").strip("\")")
+            striped = args[1].strip("show(\"").strip("\")")
             key = "{}.{}".format(args[0], striped)
             if key not in storage.all():
                 print('** no instance found **')
