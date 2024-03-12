@@ -197,6 +197,7 @@ class HBNBCommand(cmd.Cmd):
             key = "{}.{}".format(args[0], striped)
             if key not in storage.all():
                 print('** no instance found **')
+                return
             print(storage.all()[key])
 
         elif args[0] in class_names and args[1].startswith("destroy"):
