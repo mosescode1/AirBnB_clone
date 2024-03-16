@@ -1,0 +1,13 @@
+footer {
+  background: white;
+  height: 100px;
+  border-top: 1px solid #cccccc;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: 40px;
+    /* position: calc(100vh - 60px); */
+  }
+}
