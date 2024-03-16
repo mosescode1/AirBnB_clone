@@ -1,0 +1,73 @@
+.filters {
+  height: 70px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+.filters button {
+  font-size: 18px;
+  background: #ff5a5f;
+  color: #ffffff;
+  height: 48px;
+  width: 20%;
+  border: none;
+  border-radius: 4px;
+  float: right;
+  margin: 10px 0;
+  margin-right: 30px;
+}
+
+.filters h3 {
+  font-weight: 600;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.filters h4 {
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.container button:hover {
+  opacity: 90%;
+}
+
+/* Filter section content styling */
+.filters .locations {
+  line-height: 2;
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+  border-right: 1px solid #dddddd;
+  vertical-align: middle;
+}
+.popover {
+  display: none;
+  background: #fafafa;
+  list-style: none;
+  margin-top: 0;
+  padding: 15px 20px;
+  border-radius: 4px;
+}
+ul .indent {
+  padding-left: 20px;
+}
+.popover h2 {
+  font-size: 16px;
+}
+.amenities_header .popover li {
+  line-height: 2;
+}
+.locations:hover .popover,
+.amenities_header:hover .popover {
+  display: block;
+}
+.filters .amenities_header {
+  line-height: 2;
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+}

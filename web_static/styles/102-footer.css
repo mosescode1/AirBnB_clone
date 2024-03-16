@@ -7,3 +7,10 @@ footer {
   align-items: center;
   /* position: calc(100vh - 60px); */
 }
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: 40px;
+    /* position: calc(100vh - 60px); */
+  }
+}
