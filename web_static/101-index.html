@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb || clone</title>
+    <!-- header css link -->
+    <link rel="stylesheet" href="./styles/3-header.css" />
+    <!-- common css -->
+    <link rel="stylesheet" href="./styles/4-common.css" />
+    <!-- footer link -->
+    <link rel="stylesheet" href="./styles/3-footer.css" />
+    <!-- flitter.css -->
+    <link rel="stylesheet" href="./styles/6-filters.css" />
+    <!-- linking places -->
+    <link rel="stylesheet" href="./styles/101-places.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- my header -->
+    <header>
+      <div class="logo"></div>
+    </header>
+    <!-- container -->
+    <div class="container .clearfix">
+      <!-- Inner section of container fliter -->
+      <section class="filters">
+        <!-- location -->
+        <div class="locations">
+          <h3>States</h3>
+          <h4>California, Arizona...</h4>
+
+          <!-- Dropdown -->
+          <ul class="popover">
+            <li><h2>Arizona:</h2></li>
+            <li class="indent">Page1</li>
+            <li class="indent">Page2</li>
+            <li><h2>California:</h2></li>
+            <li class="indent">Page1</li>
+            <li class="indent">Page2</li>
+          </ul>
+        </div>
+        <!-- End of location -->
+
+        <!-- Amenity -->
+        <div class="amenities_header">
+          <h3>Amenities</h3>
+          <h4>Internet, Kitchen...</h4>
+
+          <!-- Dropdown -->
+          <ul class="popover">
+            <li>Internet</li>
+            <li>TV</li>
+            <li>Kitchen</li>
+            <li>Iron</li>
+          </ul>
+        </div>
+        <!-- End of amenity -->
+
+        <!-- search button -->
+        <button>Search</button>
+      </section>
+      <!-- end of section fliter -->
+
+      <!-- places section -->
+      <section class="places">
+        <h1>Places</h1>
+        <!-- Article container -->
+        <div class="article_container">
+          <!-- my home -->
+          <article>
+            <!-- Article header -->
+            <div class="article_header">
+              <h2>My Home</h2>
+              <div class="price_by_night"><span>$80</span></div>
+            </div>
+            <div class="information">
+              <!-- max guest -->
+              <div class="info">
+                <div class="max_guest"></div>
+                <p class="subtitle">2 guest</p>
+              </div>
+              <!-- number of rooms -->
+              <div class="info">
+                <div class="number_rooms"></div>
+                <p class="subtitle">1 bedroom</p>
+              </div>
+
+              <!-- numbers of bathrooms -->
+              <div class="info">
+                <div class="number_bathrooms"></div>
+                <p class="subtitle">1 Bathroom</p>
+              </div>
+            </div>
+
+            <!-- User -->
+            <div class="user">
+              <div>Owner: <span>Eteng Moses</span></div>
+            </div>
+            <!-- description -->
+            <div class="description">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut
+                perspiciatis sint quasi culpa quisquam assumenda, dolores ipsa
+                quo veritatis dolorum illum corporis vitae, debitis architecto
+                vel! Similique dolore, aliquam in non possimus nostrum
+              </p>
+            </div>
+
+            <!-- Amenities -->
+            <div class="amenities">
+              <h2>Amenities</h2>
+              <div class="amenity_list_items">
+                <ul>
+                  <li>
+                    <div class="tv"></div>
+                    <span>Tv</span>
+                  </li>
+                  <li>
+                    <div class="pet_friendly"></div>
+                    <span>pet friendly</span>
+                  </li>
+                  <li>
+                    <div class="wifi"></div>
+                    <span>wifi</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of amenities -->
+
+            <!-- Reviews-->
+            <div class="reviews">
+              <h2 class="title">2 Reviews</h2>
+              <div class="review_list_items">
+                <ul>
+                  <li>
+                    <div class="review_title">
+                      <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                    <div class="comment">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="review_title">
+                      <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                    <div class="comment">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of Review-->
+          </article>
+          <!-- End of my Home -->
+
+          <!-- TINY HOUSE-->
+          <article>
+            <div class="article_header">
+              <h2>Tiny House</h2>
+              <div class="price_by_night"><span>$65</span></div>
+            </div>
+            <div class="information">
+              <!-- max guest -->
+              <div class="info">
+                <div class="max_guest"></div>
+                <p class="subtitle">4 guest</p>
+              </div>
+              <!-- number of rooms -->
+              <div class="info">
+                <div class="number_rooms"></div>
+                <p class="subtitle">2 bedroom</p>
+              </div>
+
+              <!-- numbers of bathrooms -->
+              <div class="info">
+                <div class="number_bathrooms"></div>
+                <p class="subtitle">1 Bathroom</p>
+              </div>
+            </div>
+            <!-- User -->
+            <div class="user">
+              <div>Owner: <span>Eteng Moses</span></div>
+            </div>
+            <!-- description -->
+            <div class="description">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut
+                perspiciatis sint quasi culpa quisquam assumenda, dolores ipsa
+                quo veritatis dolorum illum corporis vitae, debitis architecto
+                vel! Similique dolore, aliquam in non possimus nostrum Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Dolorum earum
+                expedita impedit, quidem ipsa est doloribus ad veritatis nemo
+                tempora rem dolores quas in temporibus dolor laudantium hic
+                ipsum. Veniam!
+              </p>
+            </div>
+
+            <!-- Amenities -->
+            <div class="amenities">
+              <h2>Amenities</h2>
+              <div class="amenity_list_items">
+                <ul>
+                  <li>
+                    <div class="tv"></div>
+                    <span>Tv</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of amenities -->
+            <!-- Reviews-->
+            <div class="reviews">
+              <h2 class="title">2 Reviews</h2>
+              <div class="review_list_items">
+                <ul>
+                  <li>
+                    <div class="review_title">
+                      <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                    <div class="comment">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="review_title">
+                      <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                    <div class="comment">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of Review-->
+          </article>
+
+          <!-- END OF TINY HOUSE -->
+
+          <!-- A suite -->
+          <article>
+            <div class="article_header">
+              <h2>A Suite</h2>
+              <div class="price_by_night"><span>$190</span></div>
+            </div>
+            <!-- Information -->
+            <div class="information">
+              <!-- max guest -->
+              <div class="info">
+                <div class="max_guest"></div>
+                <p class="subtitle">4 guest</p>
+              </div>
+              <!-- number of rooms -->
+              <div class="info">
+                <div class="number_rooms"></div>
+                <p class="subtitle">4 bedroom</p>
+              </div>
+
+              <!-- numbers of bathrooms -->
+              <div class="info">
+                <div class="number_bathrooms"></div>
+                <p class="subtitle">4 Bathroom</p>
+              </div>
+            </div>
+            <!-- User -->
+            <div class="user">
+              <div>Owner: <span>Eteng Moses</span></div>
+            </div>
+            <!-- description -->
+            <div class="description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias, totam fuga vel reprehenderit nulla ipsa suscipit
+                tempora soluta enim aliquam atque facilis. Autem nostrum harum
+                molestias, porro, maxime delectus quisquam, recusandae corrupti
+                quos et repellendus.
+              </p>
+            </div>
+
+            <!-- Amenities -->
+            <div class="amenities">
+              <h2>Amenities</h2>
+              <div class="amenity_list_items">
+                <ul>
+                  <li>
+                    <div class="tv"></div>
+                    <span>Tv</span>
+                  </li>
+                  <li>
+                    <div class="pet_friendly"></div>
+                    <span>pet friendly</span>
+                  </li>
+                  <li>
+                    <div class="wifi"></div>
+                    <span>wifi</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of amenities -->
+
+            <!-- Reviews-->
+            <div class="reviews">
+              <h2 class="title">2 Reviews</h2>
+              <div class="review_list_items">
+                <ul>
+                  <li>
+                    <div class="review_title">
+                      <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                    <div class="comment">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="review_title">
+                      <h3>Lorem ipsum dolor sit amet</h3>
+                    </div>
+                    <div class="comment">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of Review-->
+          </article>
+          <!-- End of suite -->
+        </div>
+        <!-- end of article-container -->
+      </section>
+      <!-- End of my Place Section -->
+    </div>
+    <!-- End of container -->
+
+    <!-- footer  -->
+    <footer>
+      <p>Best School</p>
+    </footer>
+  </body>
+</html>
